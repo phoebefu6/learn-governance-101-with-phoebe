@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 1 · What is data, and why governance - learn governance 101 with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-governance-101-with-phoebe</a> / Session 1 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Data &amp; AI Governance, from scratch · Session 1 of 6</div>
+    <h1>What is data, <span class="accent">and why does anyone govern it?</span></h1>
+    <p class="sub">Before the acronyms - PDPA, GDPR, the EU AI Act - there is one plain idea: your organisation holds information about real people, and how you treat it earns or loses their trust, creates or avoids risk, and follows or breaks the law. This first hour builds the ground floor: what "personal data" actually means, and the three reasons governance exists. No jargon, no statutes. Just the mental model everything else hangs on.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 On-ramp · start here</span>
+      <span class="chip audience">New to governance: managers · founders · new DPOs</span>
+      <span class="chip audience">Plain English</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Your data</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Why start here, and not with the law</h2></div>
+    <p class="lede">Most governance training opens with a wall of acronyms and section numbers, and loses the room in five minutes. We do the opposite. Governance is not, at heart, a legal topic - it is a trust topic that the law happens to enforce. If you understand what data is and why it matters to the people it describes, every rule that follows makes sense as a consequence, not a hoop. So this hour has exactly two jobs: define "personal data" so you can spot it anywhere, and give you the three reasons - trust, risk, law - that governance exists at all.</p>
+    <div class="callout tip"><strong>Read this first</strong> This whole course is educational, not legal advice. It is the plain-English on-ramp to four deeper courses (PDPA, GDPR, the EU AI Act, and data governance). When something needs statutory detail, we point you there rather than fake it here.</div>
+    <div class="legend">
+      <span class="pill solid">Live - covered this session</span>
+      <span class="pill light">Self-study - read after</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> A definition of personal data you can apply to your own systems, the difference between data and personal data, the three reasons governance exists (trust, risk, law), and a one-line answer to "what is governance?" you can give your team tomorrow.</div>
+  </section>
+
+  <section class="section" id="personal-data">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers what personal data is</span><h2>Data, and the slice of it that is about people <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">"Data" is any recorded fact - a temperature reading, a sales total, a stock count. Governance mostly cares about a narrower slice: <strong>personal data</strong>, meaning information about an identified or identifiable living person. The test is simple: could this, alone or combined with other things you hold, point to one specific human being? If yes, it is personal data, and the rules are about it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="All data contains a slice called personal data - name, NRIC, email, location, and behaviour all point to one person - which is what governance protects">
+        <style>
+          .pdT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .pdW { font: 400 12px Inter, sans-serif; fill: #E8F3E6; }
+          .pdI { font: 700 13px Inter, sans-serif; fill: #263238; }
+          .pdS { font: 400 12px Inter, sans-serif; fill: #5A6E72; }
+          .pdN { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+          .pdBr { stroke: #3E8E44; stroke-width: 2; fill: none; }
+        </style>
+        <rect x="30" y="34" width="820" height="40" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="pdI" x="50" y="59">All data - any recorded fact (temperatures, totals, stock counts, weather)</text>
+        <text class="pdS" x="720" y="59">most of it is not about people</text>
+        <text class="pdI" x="50" y="108">Personal data - points to one identifiable person:</text>
+        <rect x="50" y="122" width="150" height="58" rx="10" fill="#245C2C"/>
+        <text class="pdT" x="66" y="148">Name</text><text class="pdW" x="66" y="167">"Aisha Tan"</text>
+        <rect x="212" y="122" width="150" height="58" rx="10" fill="#3E8E44"/>
+        <text class="pdT" x="228" y="148">ID number</text><text class="pdW" x="228" y="167">NRIC, passport</text>
+        <rect x="374" y="122" width="150" height="58" rx="10" fill="#3E8E44"/>
+        <text class="pdT" x="390" y="148">Contact</text><text class="pdW" x="390" y="167">email, phone</text>
+        <rect x="536" y="122" width="150" height="58" rx="10" fill="#64B369"/>
+        <text class="pdT" x="552" y="148">Location</text><text class="pdW" x="552" y="167">home, GPS trail</text>
+        <rect x="698" y="122" width="152" height="58" rx="10" fill="#64B369"/>
+        <text class="pdT" x="714" y="148">Behaviour</text><text class="pdW" x="714" y="167">what you clicked</text>
+        <path class="pdBr" d="M50 196 L50 206 L850 206 L850 196"/>
+        <text class="pdS" x="360" y="228">= all "personal data" - even a cookie ID or an IP can identify, when combined with more</text>
+        <rect x="30" y="256" width="820" height="44" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <rect x="46" y="268" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="pdN" x="70" y="280">The test: could this, alone or combined, point to one specific human? If yes → personal data → the rules apply.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - data, and the personal-data slice governance protects</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The one test for "is this personal data?"<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need to memorise a list. You need one question: <strong>"Could this information, by itself or combined with other things we hold, single out one living person?"</strong> If the answer is yes, treat it as personal data.</p>
+        <ul>
+          <li><strong>Obvious ones:</strong> name, NRIC or passport number, email, phone, home address, photo, date of birth.</li>
+          <li><strong>Less obvious, still personal:</strong> a cookie ID, an IP address, a device ID, a GPS trail, a "customer #4471" that you can trace back to a person.</li>
+          <li><strong>Not personal (usually):</strong> a warehouse temperature, total monthly revenue, a count of visits with no way to tie it to anyone. Aggregate and truly anonymous data falls outside.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>I run a small online shop. Here is a list of the fields we store about customers: [paste your fields]. For each, tell me whether it is personal data - could it identify one living person alone or combined with the others - and explain why in one line. Educational only.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Sensitive data - the data that needs extra care<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Inside personal data sits an even more careful slice: <strong>sensitive personal data</strong> (the GDPR calls it "special category"). It is the information that could hurt someone most if mishandled - health and medical records, race or ethnicity, religion, sexual orientation, political views, biometric data like fingerprints and face templates, and in Singapore, things like NRIC numbers get special handling.</p>
+        <ul>
+          <li>The rule of thumb: <strong>the more sensitive the data, the higher the bar</strong> for collecting, storing, and sharing it.</li>
+          <li>You do not need the legal categories yet - just the instinct that health, identity, and beliefs deserve more protection than a shipping address.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>The gym that stored too much.</strong> A neighbourhood gym collected members' names and emails (fine) but also asked for full medical histories on paper and left the folder at the front desk. That is sensitive personal data, handled with no protection - exactly the combination that turns a small business into a headline. The fix was not complicated: collect only what you need, lock up what you keep.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Data vs information vs a "data subject"<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Three words get used loosely and it is worth pinning them down, because you will meet them everywhere. <strong>Data</strong> is the raw recorded fact ("2026-07-21", "Aisha", "clicked twice"). <strong>Information</strong> is data with meaning attached (Aisha visited on 21 July and clicked twice). And the person the data is about has a name in every privacy law: the <strong>data subject</strong> - the human whose personal data it is. Governance exists to protect the data subject, so keep that person in mind: behind every row in your database is someone who would have opinions about how you treat it. We meet the full vocabulary - controller, processor, consent, purpose - in Session 2.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="why-govern">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers why governance exists</span><h2>Three reasons anyone bothers: trust, risk, law <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">If personal data is the "what", governance is the "how we look after it". And there are exactly three reasons an organisation does it. They stack: the first is why it is right, the second is why it is smart, the third is why it is not optional. Most leaders lead with the third - the law - but the first two are what make a program stick.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three reasons for governance stacked: trust (why it is right), risk (why it is smart), and law (why it is not optional)">
+        <style>
+          .wgT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .wgW { font: 400 12.5px Inter, sans-serif; fill: #E8F3E6; }
+          .wgN { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="34" width="820" height="60" rx="12" fill="#64B369"/>
+        <text class="wgT" x="52" y="60">1 · TRUST - why it is right</text>
+        <text class="wgW" x="52" y="82">people share data expecting care; treat it well and they keep coming back</text>
+        <rect x="30" y="104" width="820" height="60" rx="12" fill="#3E8E44"/>
+        <text class="wgT" x="52" y="130">2 · RISK - why it is smart</text>
+        <text class="wgW" x="52" y="152">a breach or misuse costs money, customers, and reputation; governance prevents it</text>
+        <rect x="30" y="174" width="820" height="60" rx="12" fill="#245C2C"/>
+        <text class="wgT" x="52" y="200">3 · LAW - why it is not optional</text>
+        <text class="wgW" x="52" y="222">PDPA, GDPR, the EU AI Act set duties with real fines; compliance is the floor</text>
+        <rect x="30" y="250" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="wgN" x="54" y="262">Lead with trust and risk, not just the law - that is what turns a checklist into a culture.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three reasons governance exists</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Trust: the reason before the rules<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>People hand over their data on an unspoken promise: <em>use this for what I expect, keep it safe, and do not surprise me.</em> Break that promise - sell it on, lose it, use it for something creepy - and the damage is not a fine, it is trust, which is far harder to win back. Governance is, first, keeping that promise. The organisations that get this treat privacy as part of the product, not a compliance tax.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Risk: the reason the CFO cares<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Mishandled data is a business risk with a price tag. A breach means incident costs, notification duties, lost customers, and sometimes regulatory fines. Misusing data - even legally grey use - invites complaints and brand damage. Governance is how you make that risk small and predictable instead of large and sudden.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Meridian's good week that could have been bad.</strong> A mid-size retailer, Meridian, spotted that an old marketing list with 30,000 emails was sitting unencrypted on a shared drive. Because they had a simple governance habit - a quarterly "what data do we hold, and where?" review - they caught it and locked it down before anyone else found it. No headline, no fine. That quiet non-event is exactly what good governance looks like: the disaster that did not happen.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Law: the reason it is not optional<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Finally, the law makes parts of this mandatory, with teeth. You will meet three regimes at a glance in Session 3, so just hold the shape for now:</p>
+        <ul>
+          <li><strong>Singapore's PDPA</strong> - the baseline for handling personal data in Singapore, plus the Do Not Call rules for marketing.</li>
+          <li><strong>The EU's GDPR</strong> - the world's most influential privacy law, and it can reach a Singapore company that serves people in the EU.</li>
+          <li><strong>The EU AI Act</strong> - the first big law specifically for AI systems, risk-tiered, and it too can reach beyond Europe.</li>
+        </ul>
+        <p>The fines are real (the GDPR's top tier runs into the tens of millions of euros), but notice the order: the law is reason three. If you only ever chase the law, you build a brittle checklist. If you lead with trust and risk, compliance tends to follow.</p>
+        <div class="callout tip"><strong>Governance in one sentence</strong> "Governance is how we make sure the data and AI we use is handled in a way we can trust, defend, and stand behind." Say that in your next meeting and you will be ahead of most rooms.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Find the personal data around you <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Governance gets real the moment you point it at your own data. Do this for the organisation you know best.</p>
+    <div class="steps">
+      <div class="step"><p>List five things your organisation stores about people - customers, staff, or leads. Do not overthink it: email list, HR records, CCTV, the website's analytics, the WhatsApp group.</p></div>
+      <div class="step"><p>For each, apply the one test: could it single out one living person, alone or combined? Mark it personal / not personal.</p></div>
+      <div class="step"><p>Now flag any that are sensitive - health, identity numbers, anything that could really hurt if leaked. Those need the most care.</p></div>
+      <div class="step"><p>For the most sensitive one, ask: do we actually need it, and is it protected? If the answer is "not sure", you have found your first governance task.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your data-mapping partner (paste into any chat AI)</span>Act as a plain-English privacy coach. I will list the kinds of information my organisation stores about people. For each, tell me: (1) is it personal data, (2) is it sensitive, (3) one thing I should check about how it is protected. Keep it simple, no legal jargon, and remind me this is educational not legal advice. Here is my list: [list them]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Say the "why" out loud <span class="tag demo">★ 8 min · your next team chat</span></h2></div>
+    <p class="lede">Three questions that turn the trust/risk/law idea into something your team can act on.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Trust:</strong> "What would our customers be uncomfortable to learn we do with their data?" If you can name it, you have found a trust risk worth fixing.</p></div>
+      <div class="step"><p><strong>Risk:</strong> "If we lost our biggest customer list tomorrow, what would it cost us - in money and in trust?" That number is your motivation.</p></div>
+      <div class="step"><p><strong>Law:</strong> "Do we serve or affect anyone outside Singapore - in the EU especially?" Hold the answer; Session 3's chooser will tell you which laws that pulls in.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> You do not need to be a lawyer to start governing data well. You need to know what personal data is, why it matters, and who to ask next. That is this course. The law is the floor; trust is the goal.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before Session 2 <span class="tag exercise">◐ 20 min total</span></h2></div>
+    <ul>
+      <li>Finish your list of five data types and keep it - Session 2 attaches the real vocabulary (consent, purpose, controller, processor) to it.</li>
+      <li>Ask one colleague: "who, if anyone, looks after data protection here?" You are finding out if you have a DPO (Session 5).</li>
+      <li>Notice one consent banner or privacy notice this week and read it - just to see the words in the wild.</li>
+      <li>Optional: skim your own organisation's privacy policy. You will understand a lot more of it by Session 3.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to sit with this week</strong>
+      <ol>
+        <li>What is the most sensitive personal data we hold, and is it actually protected?</li>
+        <li>Are we collecting anything we do not really need?</li>
+        <li>Do we serve or affect people outside Singapore?</li>
+        <li>If we had a data problem tomorrow, who would handle it?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Where this fits on the shelf</h2></div>
+    <p class="lede">This on-ramp distills the plain-English core of four deeper courses. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">What personal data is (and sensitive data)</span><span class="note">Part 1 · the one test - deeper in Data Governance + PDPA</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Why governance exists: trust, risk, law</span><span class="note">Part 2 · the three reasons</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The regimes (PDPA / GDPR / EU AI Act)</span><span class="note">named here · mapped in Session 3</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your analytics store a "customer #4471" that your team can trace back to a named person. Is it personal data?</p>
+      <button class="qopt" type="button">A · No - it is just a number, not a name</button>
+      <button class="qopt" type="button">B · No - only names and NRICs count</button>
+      <button class="qopt" type="button">C · Yes - if it can single out one person (even combined with other data), it is personal data</button>
+      <p class="qwhy">The test is whether it can identify one living person alone or combined with what else you hold. A traceable ID, cookie, or IP all qualify.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Which is the best one-line reason to govern data, if you want a program that lasts?</p>
+      <button class="qopt" type="button">A · Only because the law fines you if you don't</button>
+      <button class="qopt" type="button">B · Because it protects trust and lowers risk - with the law as the floor beneath both</button>
+      <button class="qopt" type="button">C · Because competitors do it</button>
+      <p class="qwhy">Trust and risk are why governance sticks; the law makes parts mandatory but a law-only checklist tends to be brittle.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · "Sensitive personal data" (special category) means...</p>
+      <button class="qopt" type="button">A · Data that could most harm someone if mishandled - health, identity, beliefs, biometrics - needing extra care</button>
+      <button class="qopt" type="button">B · Any data marked confidential by the IT team</button>
+      <button class="qopt" type="button">C · Data older than five years</button>
+      <p class="qwhy">Sensitive / special-category data (health, race, religion, sexual orientation, biometrics, and the like) carries a higher bar for how you collect, store, and share it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Data vs personal data</b><span>Data = any recorded fact. Personal data = the slice that can identify one living person.</span></div>
+      <div class="cheat-item"><b>The one test</b><span>Could this, alone or combined, single out one human? Yes → personal data → the rules apply.</span></div>
+      <div class="cheat-item"><b>Sneaky personal data</b><span>Cookie IDs, IPs, device IDs, GPS trails, traceable customer numbers all count.</span></div>
+      <div class="cheat-item"><b>Sensitive data</b><span>Health, identity numbers, race, religion, biometrics - highest bar of care.</span></div>
+      <div class="cheat-item"><b>Data subject</b><span>The human the data is about. Governance exists to protect them.</span></div>
+      <div class="cheat-item"><b>Three reasons</b><span>Trust (right) · Risk (smart) · Law (not optional). Lead with the first two.</span></div>
+      <div class="cheat-item"><b>Governance in one line</b><span>How we make sure our data and AI are handled in a way we can trust, defend, and stand behind.</span></div>
+      <div class="cheat-item"><b>Next</b><span>Session 2 attaches the real vocabulary - consent, purpose, controller, processor, rights.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Session 1 of 6 · learn-governance-101-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a2-vocabulary.html">Next: The vocabulary →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 4 · When it goes wrong - learn governance 101 with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-governance-101-with-phoebe</a> / Session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Data &amp; AI Governance, from scratch · Session 4 of 6</div>
+    <h1>When it goes wrong: <span class="accent">breaches, and what to do</span></h1>
+    <p class="sub">Most people first meet governance through a headline: "Company loses two million records." It is scary, it feels technical, and it makes governance sound like something only a security team does. This hour takes the fear out of it. A breach is a simple idea once you see its shape, and there is a calm, four-move playbook for the moment one happens. You will leave able to say what a breach actually is, walk the first four moves, and explain in plain words when you have to tell someone.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 On-ramp · medium</span>
+      <span class="chip audience">New to governance: managers · founders · new DPOs</span>
+      <span class="chip audience">Plain English</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · What &amp; moves</span>
+      <span class="a3" style="flex:4">22-40 · Tabletop</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The word everyone fears, made simple</h2></div>
+    <p class="lede">"Data breach" sounds like a hacker in a hoodie, but most breaches are far more ordinary - an email sent to the wrong person, a laptop left on a train, a cloud folder accidentally set to "public". The good news is that the response is the same no matter the cause, and it is not complicated. This hour has two jobs: show you exactly what counts as a breach so you can recognise one, and give you a calm four-move playbook so that if it ever happens, you act instead of freeze.</p>
+    <div class="callout tip"><strong>Read this first</strong> This whole course is educational, not legal advice. It is the plain-English on-ramp to four deeper courses (PDPA, GDPR, the EU AI Act, and data governance). When something needs statutory detail, we point you there rather than fake it here.</div>
+    <div class="legend">
+      <span class="pill solid">Live - covered this session</span>
+      <span class="pill light">Self-study - read after</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> A plain definition of a breach and its three failure modes, the four first moves (contain, assess, notify, learn), a rule-of-thumb for when you must tell the regulator and the people affected, and a mini tabletop you can run with your own team.</div>
+  </section>
+
+  <section class="section" id="what">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers what a breach is</span><h2>What a breach actually is <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">Strip away the drama and a <strong>data breach</strong> is one thing: personal data ends up exposed, lost, altered, or reached by someone who should not have it. There are exactly three ways that can go wrong, and it helps to hold all three in your head - because the third one surprises people. It is not always about information leaking out; sometimes the problem is that you can no longer get to your own data.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three ways a breach happens: loss of confidentiality (data seen or leaked), loss of integrity (data altered), and loss of availability (data lost or locked)">
+        <style>
+          .br1T { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .br1W { font: 400 12.5px Inter, sans-serif; fill: #E8F3E6; }
+          .br1L { font: 600 12px Inter, sans-serif; fill: #E8F3E6; }
+          .br1H { font: 700 14px Inter, sans-serif; fill: #263238; }
+          .br1N { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+        </style>
+        <text class="br1H" x="30" y="30">A breach = personal data exposed, lost, altered, or reached by the wrong person. Three failure modes:</text>
+        <rect x="30" y="52" width="260" height="150" rx="12" fill="#245C2C"/>
+        <text class="br1L" x="52" y="82">MODE 1</text>
+        <text class="br1T" x="52" y="106">Confidentiality</text>
+        <text class="br1W" x="52" y="132">Data seen or leaked</text>
+        <text class="br1W" x="52" y="154">Someone who should not</text>
+        <text class="br1W" x="52" y="172">see it, saw it</text>
+        <rect x="310" y="52" width="260" height="150" rx="12" fill="#3E8E44"/>
+        <text class="br1L" x="332" y="82">MODE 2</text>
+        <text class="br1T" x="332" y="106">Integrity</text>
+        <text class="br1W" x="332" y="132">Data altered</text>
+        <text class="br1W" x="332" y="154">Records changed,</text>
+        <text class="br1W" x="332" y="172">wrong or tampered</text>
+        <rect x="590" y="52" width="260" height="150" rx="12" fill="#64B369"/>
+        <text class="br1L" x="612" y="82">MODE 3</text>
+        <text class="br1T" x="612" y="106">Availability</text>
+        <text class="br1W" x="612" y="132">Data lost or locked</text>
+        <text class="br1W" x="612" y="154">Deleted, or held by</text>
+        <text class="br1W" x="612" y="172">ransomware</text>
+        <rect x="30" y="242" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="br1N" x="54" y="254">Ransomware counts: your data is still there, but you cannot reach it. That is a breach too.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three ways a breach happens</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The three failure modes, in one sentence each<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Security people call these the "CIA triad", but you do not need the jargon. You need the three plain questions to ask about any incident:</p>
+        <ul>
+          <li><strong>Confidentiality</strong> - did someone see it who should not have? (A leak, a wrong recipient, a stolen login.)</li>
+          <li><strong>Integrity</strong> - was it changed or corrupted when it should not have been? (Altered records, a tampered file.)</li>
+          <li><strong>Availability</strong> - can you still get to it when you need it? (Deleted by accident, or locked up by ransomware.)</li>
+        </ul>
+        <p>If the answer to any of these is bad, and personal data is involved, you are looking at a breach. Notice that only the first is about data "leaking" - the other two are just as real.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>How breaches actually happen<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The causes are more human than Hollywood. In the real world, the top ways personal data goes wrong are:</p>
+        <ul>
+          <li><strong>The misaddressed email</strong> - the classic. You type a name, autocomplete picks the wrong one, and a spreadsheet of customers lands in a stranger's inbox.</li>
+          <li><strong>The lost device</strong> - an unencrypted laptop or phone left in a taxi, a USB stick dropped in a car park.</li>
+          <li><strong>The misconfigured cloud</strong> - a storage folder set to "anyone with the link" that should have been private.</li>
+          <li><strong>Hacking</strong> - stolen passwords, phishing, or malware, including ransomware that locks your files.</li>
+          <li><strong>The insider</strong> - a staff member who takes or peeks at data they should not.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Not every mishap is a reportable breach<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>An incident and a reportable breach are not the same thing. If you send an internal spreadsheet to the wrong colleague inside your own company and they delete it straight away, that is a wobble, not a headline. What matters is whether personal data was genuinely put at risk of harm, and how many people it touched. We will meet the "when do I have to tell someone" line in Part 2 - for now, hold the instinct: recognise the incident first, judge how serious it is second.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>The email that went to the whole list.</strong> A clinic emailed appointment reminders but put every patient's address in the "To" field instead of "Bcc". Nothing was hacked, no file was stolen - yet hundreds of people could now see each other's names and the fact they were patients. That is a confidentiality breach of sensitive data, caused by one wrong field. The lesson: breaches are usually ordinary mistakes, not master criminals.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="firstmoves">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers the response</span><h2>The first four moves <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The moment you suspect a breach, panic is the enemy. What you want is a sequence you can follow on autopilot, the same way a fire drill works. There are four moves, always in this order: <strong>contain, assess, notify, learn</strong>. Do them in order and even a bad day stays manageable.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four first moves in order: contain to stop the bleeding, assess how bad it is, notify the regulator and people if serious, then learn and fix the root cause">
+        <defs>
+          <marker id="arrBr2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5A6E72"/>
+          </marker>
+        </defs>
+        <style>
+          .br2T { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .br2W { font: 400 12px Inter, sans-serif; fill: #E8F3E6; }
+          .br2L { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .br2N { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+          .arrBr2 { stroke: #5A6E72; stroke-width: 2.5; fill: none; }
+        </style>
+        <rect x="24" y="60" width="180" height="96" rx="12" fill="#245C2C"/>
+        <text class="br2L" x="44" y="90">1</text>
+        <text class="br2T" x="44" y="114">Contain</text>
+        <text class="br2W" x="44" y="136">stop the bleeding</text>
+        <path class="arrBr2" d="M210 108 L230 108" marker-end="url(#arrBr2)"/>
+        <rect x="238" y="60" width="180" height="96" rx="12" fill="#3E8E44"/>
+        <text class="br2L" x="258" y="90">2</text>
+        <text class="br2T" x="258" y="114">Assess</text>
+        <text class="br2W" x="258" y="136">how bad is it?</text>
+        <path class="arrBr2" d="M424 108 L444 108" marker-end="url(#arrBr2)"/>
+        <rect x="452" y="60" width="180" height="96" rx="12" fill="#3E8E44"/>
+        <text class="br2L" x="472" y="90">3</text>
+        <text class="br2T" x="472" y="114">Notify</text>
+        <text class="br2W" x="472" y="136">regulator + people</text>
+        <path class="arrBr2" d="M638 108 L658 108" marker-end="url(#arrBr2)"/>
+        <rect x="666" y="60" width="188" height="96" rx="12" fill="#64B369"/>
+        <text class="br2L" x="686" y="90">4</text>
+        <text class="br2T" x="686" y="114">Learn</text>
+        <text class="br2W" x="686" y="136">fix the root cause</text>
+        <rect x="24" y="196" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="br2N" x="48" y="208">Always in order. Contain first - you cannot assess or notify accurately while it is still leaking.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - contain, assess, notify, learn</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Move 1-2: contain, then assess<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Contain</strong> means stop the bleeding, right now. Revoke the shared link, reset the password, recall the email if you can, take the affected system offline. The goal is to make sure it is not still getting worse while you figure out what happened.</p>
+        <p><strong>Assess</strong> means answer three questions calmly: <em>what data was involved, how many people does it affect, and how bad could it be for them?</em> A leaked list of newsletter emails is one thing; a leaked list of medical conditions is another. This assessment is what tells you whether you have to move to the next step.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Move 3-4: notify, then learn<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Notify</strong> means telling the people who need to know - the regulator, and often the individuals affected - when the breach is serious enough. Not every incident crosses that line, which is why assess comes first. When it does, speed and honesty matter more than a perfect report.</p>
+        <p><strong>Learn</strong> is the move everyone skips and shouldn't. Once the fire is out, ask what let it start: the autocomplete that sent the email, the folder nobody locked, the password everyone shared. Fix that root cause, and the same breach cannot happen twice. This is where a bad day turns into a stronger organisation.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>When do you actually have to tell someone?<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is the question everyone asks, and the answer is a rule of thumb, not a formula. The two big regimes draw the line like this:</p>
+        <ul>
+          <li><strong>GDPR (Europe): the 72-hour rule.</strong> If a breach is likely to put people's rights at risk, you notify the supervisory authority within <strong>72 hours</strong> of becoming aware of it. That "72 hours" is the famous number worth remembering. If the risk to people is high, you tell the affected individuals too.</li>
+          <li><strong>Singapore's PDPA: significant harm or large scale.</strong> You notify the regulator (the PDPC) and the affected people when the breach is <strong>likely to cause them significant harm</strong>, or when it is <strong>large scale</strong> - a common rule of thumb is around <strong>500 or more</strong> people affected.</li>
+        </ul>
+        <p>Keep these as instincts, not statutes: <em>serious harm, or lots of people, means you probably have to tell someone - and fast.</em> The deeper PDPA and GDPR courses have the exact wording, timelines, and exceptions.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>The lost laptop that stayed a non-event.</strong> A staff member lost a work laptop on the train. Because it was encrypted, the data on it was unreadable to whoever found it - so the actual risk to people was low. The team still logged it and assessed it, but a well-judged assessment meant this one did not need a public notification. Encryption did not prevent the loss; it changed how serious the loss was.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>A mini tabletop: "we lost the customer list" <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">A tabletop is just a walk-through of a pretend crisis while everyone is calm. Run this one for your own organisation - it is the cheapest breach insurance there is.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Set the scene.</strong> "It's tomorrow morning. We've discovered our whole customer list was emailed to the wrong person yesterday." Say it out loud - imagining it is real is the point.</p></div>
+      <div class="step"><p><strong>Contain.</strong> What could you actually do to stop it spreading? Recall the email, call the recipient, change access? Write down who does what.</p></div>
+      <div class="step"><p><strong>Assess.</strong> What was on that list - names, emails, anything sensitive? How many people? How bad for them? If you don't know, that gap is a finding.</p></div>
+      <div class="step"><p><strong>Notify and learn.</strong> Given the harm and the numbers, would you have to tell the regulator and the people? And what one change would stop it happening again?</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your breach-coach partner (paste into any chat AI)</span>Act as a calm, plain-English breach coach. I want to run a tabletop exercise. The scenario is: [describe what got exposed, lost, or locked]. Walk me through the four moves - contain, assess, notify, learn - one at a time, asking me a question at each step. At the end, give me a rule-of-thumb on whether this sounds serious enough to notify a regulator or affected people. Keep it simple, no legal jargon, and remind me this is educational, not legal advice.</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Three questions to answer before you need to <span class="tag demo">★ 8 min · your next team chat</span></h2></div>
+    <p class="lede">You never want to be figuring these out during a real breach. Answer them now, while it costs nothing.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Who first?</strong> "If we found a breach at 9pm on a Friday, who is the first person we call?" If there is no clear name, that is your first fix.</p></div>
+      <div class="step"><p><strong>How many?</strong> "Do we know how many people are in our biggest dataset?" You cannot judge "large scale" if you have never counted.</p></div>
+      <div class="step"><p><strong>Could we reach them?</strong> "If we had to warn every affected person tomorrow, could we - do we have a way to contact them?" A list you cannot email is a problem in waiting.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> A breach is not a moral failing, it is an event you prepare for - like a fire drill. The organisations that come out fine are not the ones that never slip; they are the ones who knew their four moves before the alarm went off.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before Session 5 <span class="tag exercise">◐ 20 min total</span></h2></div>
+    <ul>
+      <li>Write your four moves on one page - contain, assess, notify, learn - with a name next to each. Stick it somewhere findable. That is a starter breach plan.</li>
+      <li>Find out who your organisation would notify: does anyone know how to reach the PDPC, or your EU authority? Session 5 is about who owns this.</li>
+      <li>Count the people in your biggest personal-data set, roughly. Knowing whether you are above or below "a few hundred" changes your instincts.</li>
+      <li>Optional: search one recent breach headline and spot which failure mode it was - confidentiality, integrity, or availability.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to sit with this week</strong>
+      <ol>
+        <li>If a breach happened today, who makes the first call, and do they know it?</li>
+        <li>Which of our datasets would hurt people most if it leaked?</li>
+        <li>Could we actually contact affected people if we had to?</li>
+        <li>What is the single most likely way we would have a breach - and have we closed it?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Where this fits on the shelf</h2></div>
+    <p class="lede">This on-ramp distills the plain-English core of the deeper courses. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">What a breach is + the three failure modes</span><span class="note">Part 1 · deeper in PDPA + Data Governance</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The four moves + when to notify</span><span class="note">Part 2 · PDPA (500+ / significant harm) &amp; GDPR (72 hours)</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Exact timelines, thresholds &amp; exceptions</span><span class="note">named here · full detail in the PDPA / DNC and GDPR courses</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Ransomware locks up your customer files so nobody in your company can open them. No data left the building. Is this a breach?</p>
+      <button class="qopt" type="button">A · No - nothing leaked out, so it isn't a breach</button>
+      <button class="qopt" type="button">B · No - only hacking that steals data counts</button>
+      <button class="qopt" type="button">C · Yes - losing access to your own data is a breach (loss of availability)</button>
+      <p class="qwhy">A breach has three failure modes: confidentiality (seen), integrity (altered), and availability (lost or locked). Ransomware is a classic availability breach even though nothing leaked.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · The famous "72-hour" window to notify the authority after becoming aware of a risky breach belongs to which regime?</p>
+      <button class="qopt" type="button">A · Singapore's PDPA</button>
+      <button class="qopt" type="button">B · The EU's GDPR</button>
+      <button class="qopt" type="button">C · The EU AI Act</button>
+      <p class="qwhy">GDPR sets the well-known 72-hour clock for notifying the supervisory authority. Singapore's PDPA uses a different test - significant harm or large scale (rule of thumb, 500+ people).</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · You have just discovered a breach. What is the right FIRST move?</p>
+      <button class="qopt" type="button">A · Contain it - stop the bleeding before anything else</button>
+      <button class="qopt" type="button">B · Notify the regulator immediately, before you know the details</button>
+      <button class="qopt" type="button">C · Write the press statement</button>
+      <p class="qwhy">The order is contain, assess, notify, learn. You contain first so it stops getting worse - you cannot assess or notify accurately while it is still leaking.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>A breach, plainly</b><span>Personal data exposed, lost, altered, or reached by someone who shouldn't.</span></div>
+      <div class="cheat-item"><b>Three failure modes</b><span>Confidentiality (seen) · Integrity (altered) · Availability (lost or locked).</span></div>
+      <div class="cheat-item"><b>Ransomware counts</b><span>You still have the data but can't reach it - that's a breach too.</span></div>
+      <div class="cheat-item"><b>The four moves</b><span>Contain → Assess → Notify → Learn. Always in that order.</span></div>
+      <div class="cheat-item"><b>Contain first</b><span>Stop the bleeding: revoke access, recall, take it offline.</span></div>
+      <div class="cheat-item"><b>GDPR: 72 hours</b><span>Notify the authority within 72 hours of becoming aware, if it risks people.</span></div>
+      <div class="cheat-item"><b>PDPA: harm or scale</b><span>Notify the PDPC + people if significant harm, or large scale (~500+).</span></div>
+      <div class="cheat-item"><b>Always learn</b><span>Fix the root cause so the same breach can't happen twice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Session 4 of 6 · learn-governance-101-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a5-dpo-roles.html">Next: Who owns this →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

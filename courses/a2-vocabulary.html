@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 2 · The vocabulary - learn governance 101 with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-governance-101-with-phoebe</a> / Session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Data &amp; AI Governance, from scratch · Session 2 of 6</div>
+    <h1>The vocabulary, <span class="accent">in one breath</span></h1>
+    <p class="sub">Session 1 gave you the what and the why. This hour hands you the shared words every regime uses - the same handful of terms show up in Singapore's PDPA, the EU's GDPR, and beyond, just dressed in slightly different clothes. Learn them once here, in plain English, and the deeper courses stop feeling like a foreign language. We cover the people (data subject, controller, processor), the promises (consent, purpose, notice), and the rights people can ask you to honour.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 On-ramp · start here</span>
+      <span class="chip audience">New to governance: managers · founders · new DPOs</span>
+      <span class="chip audience">Plain English</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · The words</span>
+      <span class="a3" style="flex:4">22-40 · Your data</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The words you keep meeting</h2></div>
+    <p class="lede">Here is the good news: governance has a small vocabulary. Once you can say who the people are, what the promises are, and what rights someone can ask you to honour, you can read a privacy policy, sit in a compliance meeting, or brief your team without nodding along blindly. Every regime reuses these same ideas. Singapore's PDPA and the EU's GDPR pick slightly different words for the same roles, and we will flag that once - but the concept underneath is identical. This session is the shared dictionary the rest of the course leans on.</p>
+    <div class="callout tip"><strong>Read this first</strong> This whole course is educational, not legal advice. We teach the concepts every regime shares, in plain words. When you need the exact statutory wording, the deeper courses (PDPA, GDPR, the EU AI Act, and data governance) have it.</div>
+    <div class="legend">
+      <span class="pill solid">Live - covered this session</span>
+      <span class="pill light">Self-study - read after</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> Three roles you can name on sight (data subject, controller, processor), the three promises that sit at the heart of every privacy law (consent, purpose, notice), and the short list of rights people can ask you to honour - enough to read any privacy notice with understanding.</div>
+  </section>
+
+  <section class="section" id="roles">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the three roles</span><h2>The people: data subject, controller, processor <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Every privacy story has three characters. There is the <strong>person the data is about</strong>, the <strong>organisation that decides why and how the data gets used</strong>, and the <strong>helper that only acts on that organisation's instructions</strong>. Learn these three and you can place anyone in any data arrangement. The names are data subject, controller, and processor - and yes, the PDPA uses different words for two of them, which we note below.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A data subject's personal data flows to a controller who decides why and how it is used, and who instructs a processor that acts only on those instructions">
+        <defs>
+          <marker id="arrV2a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0 0 L9 5 L0 10 z" fill="#3E8E44"/>
+          </marker>
+        </defs>
+        <style>
+          .v2aT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .v2aW { font: 400 12px Inter, sans-serif; fill: #E8F3E6; }
+          .v2aL { font: 600 12px Inter, sans-serif; fill: #5A6E72; }
+          .v2aN { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+          .v2aF { stroke: #3E8E44; stroke-width: 2.5; fill: none; }
+        </style>
+        <rect x="24" y="70" width="180" height="78" rx="12" fill="#245C2C"/>
+        <text class="v2aT" x="44" y="104">Data subject</text>
+        <text class="v2aW" x="44" y="126">the person the</text>
+        <text class="v2aW" x="44" y="142">data is about</text>
+        <rect x="350" y="70" width="180" height="78" rx="12" fill="#3E8E44"/>
+        <text class="v2aT" x="370" y="104">Controller</text>
+        <text class="v2aW" x="370" y="126">decides WHY and</text>
+        <text class="v2aW" x="370" y="142">HOW data is used</text>
+        <rect x="676" y="70" width="180" height="78" rx="12" fill="#64B369"/>
+        <text class="v2aT" x="696" y="104">Processor</text>
+        <text class="v2aW" x="696" y="126">acts ONLY on the</text>
+        <text class="v2aW" x="696" y="142">controller's word</text>
+        <path class="v2aF" d="M204 109 L344 109" marker-end="url(#arrV2a)"/>
+        <text class="v2aL" x="222" y="98">their data →</text>
+        <path class="v2aF" d="M530 109 L670 109" marker-end="url(#arrV2a)"/>
+        <text class="v2aL" x="548" y="98">instructs →</text>
+        <rect x="24" y="196" width="832" height="40" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="v2aL" x="44" y="221" style="fill:#263238">PDPA wording: the controller is the "organisation"; the processor is a "data intermediary". Same idea.</text>
+        <rect x="24" y="256" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="v2aN" x="48" y="268">Ask "who decided?" for the controller, and "who just followed orders?" for the processor.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three roles and how data moves between them</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The data subject - the human behind the row<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The <strong>data subject</strong> is simply the person the personal data is about - your customer, your employee, your newsletter reader. It is the term we met at the end of Session 1, and it is the one to keep in your head, because every rule that follows exists to protect this person. When you are unsure whether something is allowed, picture the data subject reading over your shoulder: would they be surprised, or comfortable?</p>
+        <ul>
+          <li>Always a living person, never a company. A business is not a data subject.</li>
+          <li>One record can involve many data subjects - a group photo, a shared chat, a list of attendees.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The controller - the one who decides<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The <strong>controller</strong> is the organisation that decides <em>why</em> personal data is collected and <em>how</em> it is used. If you choose to build an email list, and you choose what to do with it, you are the controller of that list. The controller carries the responsibility - it is the one the rules hold accountable. Singapore's PDPA calls this player the <strong>"organisation"</strong>, but the meaning is the same: whoever calls the shots on the data.</p>
+        <ul>
+          <li>The test is decision-making power: who sets the purpose and the means?</li>
+          <li>Two organisations can be joint controllers when they decide together.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The processor - the helper who follows instructions<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The <strong>processor</strong> handles personal data <em>on the controller's behalf</em> and only does what it is told. Your payroll vendor, your cloud host, your email-sending tool - they touch the data, but they do not decide the purpose. The PDPA name for this role is <strong>"data intermediary"</strong>. The key line is simple: a processor that starts deciding things for itself has quietly become a controller, and picks up a controller's responsibilities.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>A neighbourhood shop and its email tool.</strong> Picture a small shop that emails a monthly promotion. The <strong>shop is the controller</strong> - it decided to build the list and what to send. The <strong>email platform it uses is the processor</strong> - it stores the addresses and presses send, but only when the shop tells it to. And the <strong>customer is the data subject</strong> - the person the addresses belong to. Three roles, one everyday errand.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the labels matter for who is on the hook<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>These are not just tidy words - they decide who is responsible when something goes wrong. The controller owes the duties to the data subject: give notice, respect the purpose, honour rights, keep it safe. The processor owes its duties to the controller: follow the contract, do not go off-script, help when the controller needs to answer a request. When you sign up a new vendor, you are almost always the controller and they are the processor - which means the buck still stops with you. That is why a written agreement setting out what the processor may and may not do is a governance staple, not red tape.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="promises">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers the three promises</span><h2>The promises: consent, purpose, notice <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">If the roles are the cast, the promises are the plot. Almost everything a privacy law asks of a controller boils down to three plain commitments: tell people what you are doing (<strong>notice</strong>), get their permission for it (<strong>consent</strong>), and then stick to what you said (<strong>purpose limitation</strong>). Keep those three and you are most of the way there.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A funnel: collect personal data for a stated purpose, use it only for that purpose, and keep it only as long as needed">
+        <style>
+          .v2bT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .v2bW { font: 400 12px Inter, sans-serif; fill: #E8F3E6; }
+          .v2bI { font: 700 13px Inter, sans-serif; fill: #263238; }
+          .v2bN { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="60" y="40" width="760" height="56" rx="10" fill="#245C2C"/>
+        <text class="v2bT" x="80" y="66">1 · Collect for a stated purpose</text>
+        <text class="v2bW" x="80" y="86">tell people what and why (notice), and get consent to do it</text>
+        <rect x="140" y="112" width="600" height="56" rx="10" fill="#3E8E44"/>
+        <text class="v2bT" x="160" y="138">2 · Use it only for that purpose</text>
+        <text class="v2bW" x="160" y="158">no quietly repurposing the data for something new</text>
+        <rect x="220" y="184" width="440" height="56" rx="10" fill="#64B369"/>
+        <text class="v2bT" x="240" y="210">3 · Keep only as long as needed</text>
+        <text class="v2bW" x="240" y="230">then delete or anonymise it</text>
+        <rect x="60" y="258" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="v2bN" x="84" y="270">The narrower you go, the safer you are: least data, one purpose, shortest time.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the life of a piece of personal data, done well</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Consent - permission for a stated purpose<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Consent</strong> is permission to use someone's data for a purpose you have told them about. Good consent is a clear yes to a clear ask - not a pre-ticked box, not buried in ten pages of terms. And because it is permission for a <em>stated</em> purpose, it does not stretch: consent to email you a receipt is not consent to add you to a marketing list. Consent is one lawful way to use data - there are others - but it is the one beginners meet first, and the easiest to get wrong by being vague.</p>
+        <ul>
+          <li>Clear, specific, and freely given beats broad and buried.</li>
+          <li>People can take it back - see the rights in Part 3.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Purpose limitation - stick to what you said<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Purpose limitation</strong> is the promise that turns consent into trust: use the data only for the purpose you collected it for. You gathered emails to send order updates - so you do not suddenly sell them, feed them to a new AI experiment, or blast a promotion, unless you go back and ask again. This one rule prevents most "that felt creepy" moments, because surprise is exactly what it rules out. Its close cousin is <strong>data minimisation</strong>: collect only what the purpose needs, and keep it only as long as the purpose lasts.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Notice - tell people, in words they understand<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Notice</strong> (some laws say <strong>notification</strong>) is simply telling people what you collect, why, and what you will do with it - before or as you collect it. It is the privacy notice on your website, the line under a signup form, the short explanation at the till. Good notice is honest and readable; nobody is served by a wall of legalese. Notice is what makes consent meaningful: you cannot truly agree to something you were never told.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>The signup box that got it right.</strong> A small studio added one line under its newsletter form: "We will use your email to send our monthly note and nothing else. Unsubscribe anytime." That single sentence is notice (what and why), sets the purpose (monthly note only), and signals a right (withdraw) - three promises in twenty words. Sign-ups went up, because clarity reads as respect.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Recap: personal vs sensitive data<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Carrying over from Session 1: <strong>personal data</strong> is anything that can identify one living person, and <strong>sensitive data</strong> (the GDPR's "special category") is the slice that could hurt most if mishandled - health, race, religion, sexual orientation, political views, biometrics. The promises above apply to all personal data, but sensitive data raises the bar on every one of them: you need a stronger reason to collect it, tighter protection while you hold it, and more care before you share it. When you meet the vocabulary in the wild, watch for phrases like "we may use your health information" - that is a signal the highest bar should be in play.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="rights">
+    <div class="section-kicker"><span class="klabel">Part 3 · covers the rights</span><h2>The rights, in one breath <span class="tag concept">5 min live</span></h2></div>
+    <p class="lede">The flip side of a controller's promises is a set of rights the data subject can exercise. Say them in one breath: people can be <strong>informed</strong>, <strong>access</strong> a copy, <strong>correct</strong> errors, and <strong>withdraw</strong> consent. The GDPR adds two more you will hear about: <strong>erasure</strong> (the "right to be forgotten") and <strong>portability</strong> (getting your data in a portable form). Singapore's PDPA gives the first four in spirit; the GDPR reaches further.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A row of rights: be informed, access, correct, withdraw consent - shared - then erase and port, which the GDPR adds">
+        <style>
+          .v2cT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .v2cI { font: 700 13px Inter, sans-serif; fill: #263238; }
+          .v2cL { font: 600 12px Inter, sans-serif; fill: #5A6E72; }
+          .v2cN { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+        </style>
+        <text class="v2cL" x="30" y="44">Shared spirit (PDPA and GDPR)</text>
+        <rect x="30" y="54" width="180" height="52" rx="10" fill="#245C2C"/>
+        <text class="v2cT" x="50" y="85">Be informed</text>
+        <rect x="222" y="54" width="180" height="52" rx="10" fill="#3E8E44"/>
+        <text class="v2cT" x="242" y="85">Access a copy</text>
+        <rect x="414" y="54" width="180" height="52" rx="10" fill="#3E8E44"/>
+        <text class="v2cT" x="434" y="85">Correct errors</text>
+        <rect x="606" y="54" width="180" height="52" rx="10" fill="#64B369"/>
+        <text class="v2cT" x="626" y="85">Withdraw consent</text>
+        <text class="v2cL" x="30" y="140">GDPR goes further</text>
+        <rect x="30" y="150" width="180" height="46" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="v2cI" x="50" y="178">Erase (forgotten)</text>
+        <rect x="222" y="150" width="180" height="46" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="v2cI" x="242" y="178">Port your data</text>
+        <rect x="414" y="169" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="v2cN" x="438" y="181">If asked: find, show, fix, and stop.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the rights people can ask you to honour</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The rights, plainly - and where GDPR goes further<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need the article numbers. You need to recognise these when a person asks, and know that a working organisation can answer:</p>
+        <ul>
+          <li><strong>Be informed</strong> - know what you hold about them and why (this is notice, from their side).</li>
+          <li><strong>Access</strong> - get a copy of the personal data you hold about them.</li>
+          <li><strong>Correct</strong> - fix data that is wrong or out of date.</li>
+          <li><strong>Withdraw consent</strong> - change their mind and have you stop the use they agreed to.</li>
+          <li><strong>Erase (GDPR)</strong> - the "right to be forgotten": ask you to delete their data in certain cases.</li>
+          <li><strong>Port (GDPR)</strong> - get their data in a common format to take elsewhere; the GDPR also adds a right to object.</li>
+        </ul>
+        <p>The shared spirit is the first four - Singapore's PDPA gives access, correction, and withdrawal, and informs people through notice. The GDPR layers on erasure, portability, and objection. For this on-ramp, hold the shape: <em>find it, show it, fix it, stop it</em> - and know the EU asks for a little more.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Label your own data <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Take the five data types you listed in Session 1 and put the new vocabulary to work on them. This is where the words stop being abstract.</p>
+    <div class="steps">
+      <div class="step"><p>Write your five data types down the left of a page (email list, HR records, CCTV, website analytics, that WhatsApp group).</p></div>
+      <div class="step"><p>For each, name the <strong>controller</strong> (who decided to collect it - usually you) and the <strong>processor</strong> (the tool or vendor that handles it for you).</p></div>
+      <div class="step"><p>Ask: did we <strong>get consent</strong> or otherwise have a good reason, and did we <strong>state a purpose</strong> at the time? Mark yes, no, or not sure.</p></div>
+      <div class="step"><p>Any "no" or "not sure" is a governance to-do. You have just done your first data-and-vocabulary map.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your vocabulary coach (paste into any chat AI)</span>Act as a plain-English privacy coach. I will list the kinds of personal data my organisation holds. For each, help me name: (1) who the controller is, (2) who the processor is (any vendor or tool), (3) whether we likely have consent or a stated purpose, and one thing to check. No legal jargon, and remind me this is educational, not legal advice. Here is my list: [list them]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Three questions about rights <span class="tag demo">★ 8 min · your next team chat</span></h2></div>
+    <p class="lede">If a customer emailed today and exercised a right, could you answer? These three questions tell you fast.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Find:</strong> "If one person asked what data we hold about them, could we pull it together - or is it scattered across five tools no one owns?"</p></div>
+      <div class="step"><p><strong>Fix:</strong> "If they told us a detail is wrong, do we have a clear way to correct it everywhere it lives?"</p></div>
+      <div class="step"><p><strong>Stop:</strong> "If they withdrew consent to marketing, could we actually stop - and would every tool respect that?"</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> Rights are not paperwork - they are the moment a person tests whether your promises were real. An organisation that can find, show, fix, and stop on request is one that has its data house in order. That readiness is the whole point of governance.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before Session 3 <span class="tag exercise">◐ 20 min total</span></h2></div>
+    <ul>
+      <li>Finish your labelled map - five data types, each with a controller, a processor, and a consent/purpose note. Session 3 asks which laws reach them.</li>
+      <li>Open one privacy notice you use (yours or a big brand's) and spot the vocabulary: can you find the purpose, the mention of consent, and any rights?</li>
+      <li>List the vendors that touch your personal data (cloud, email, payroll, CRM). Those are your processors - Session 3 will ask where they are based.</li>
+      <li>Optional: write your own one-sentence notice for a signup form, using the studio example as a model.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to sit with this week</strong>
+      <ol>
+        <li>For our biggest data set, who is really the controller - and are our vendors clearly just processors?</li>
+        <li>Did we state a purpose when we collected our email list, and have we stuck to it?</li>
+        <li>If someone asked us to delete their data, could we - and would we know if the law required it?</li>
+        <li>Which of the six rights would be hardest for us to honour today?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Where this fits on the shelf</h2></div>
+    <p class="lede">This on-ramp distills the plain-English core of four deeper courses. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The three roles: data subject, controller, processor</span><span class="note">Part 1 · deeper in Data Governance + PDPA (organisation / data intermediary)</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">The three promises: consent, purpose, notice</span><span class="note">Part 2 · the heart of every privacy law</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The rights (including GDPR-only erasure and portability)</span><span class="note">Part 3 · named here · full detail in PDPA + GDPR</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Your shop hires a cloud email tool to send newsletters you designed to a list you built. In that arrangement, who is the controller and who is the processor?</p>
+      <button class="qopt" type="button">A · The email tool is the controller; your shop is the processor</button>
+      <button class="qopt" type="button">B · Your shop is the controller (it decided why and how); the email tool is the processor (it just follows instructions)</button>
+      <button class="qopt" type="button">C · They are both data subjects</button>
+      <p class="qwhy">The controller decides the purpose and means - that is your shop. The processor only acts on the controller's instructions - that is the email tool (the PDPA would call it a "data intermediary").</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · You collected emails to send order receipts, then start using them for marketing without asking again. Which promise did you break?</p>
+      <button class="qopt" type="button">A · None - once you have an email you can use it freely</button>
+      <button class="qopt" type="button">B · Only the notice rule</button>
+      <button class="qopt" type="button">C · Purpose limitation - you used the data for a new purpose beyond the one you collected and got consent for</button>
+      <p class="qwhy">Consent is permission for a stated purpose; purpose limitation says stick to it. A new purpose (marketing) needs a fresh basis - usually asking again.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which right is one the GDPR adds that Singapore's PDPA does not give in the same way?</p>
+      <button class="qopt" type="button">A · Erasure - the "right to be forgotten" (and data portability)</button>
+      <button class="qopt" type="button">B · The right to access a copy of your data</button>
+      <button class="qopt" type="button">C · The right to correct wrong data</button>
+      <p class="qwhy">Access and correction are shared in spirit by both. Erasure ("right to be forgotten") and portability are the extras the GDPR layers on top.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Data subject</b><span>The living person the data is about. Every rule exists to protect them.</span></div>
+      <div class="cheat-item"><b>Controller</b><span>Decides why and how data is used - carries the responsibility. PDPA says "organisation".</span></div>
+      <div class="cheat-item"><b>Processor</b><span>Acts only on the controller's instructions. PDPA says "data intermediary".</span></div>
+      <div class="cheat-item"><b>Consent</b><span>Clear permission for a stated purpose. Not pre-ticked, not buried. Can be withdrawn.</span></div>
+      <div class="cheat-item"><b>Purpose limitation</b><span>Use data only for the purpose you collected it for. Prevents the "creepy" surprise.</span></div>
+      <div class="cheat-item"><b>Notice</b><span>Tell people what you collect and why, in plain words - what makes consent real.</span></div>
+      <div class="cheat-item"><b>Shared rights</b><span>Be informed · access · correct · withdraw consent. Find it, show it, fix it, stop it.</span></div>
+      <div class="cheat-item"><b>GDPR adds</b><span>Erasure ("right to be forgotten"), portability, and objection - the EU goes further.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Session 2 of 6 · learn-governance-101-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a3-regime-map.html">Next: The regime map →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

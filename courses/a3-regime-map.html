@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 3 · The regime map - learn governance 101 with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-governance-101-with-phoebe</a> / Session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Data &amp; AI Governance, from scratch · Session 3 of 6</div>
+    <h1>The regime map, <span class="accent">and which one touches me</span></h1>
+    <p class="sub">Three big rulebooks come up again and again in any governance conversation: Singapore's PDPA, the EU's GDPR, and the EU AI Act. This hour gives you the map, not the fine print - whose law each is, what it covers, and the surprising part: these laws can reach a Singapore company even when its office never leaves Singapore. By the end you will run a plain-English chooser on your own organisation and know which regimes likely apply to you.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 On-ramp · picking up pace</span>
+      <span class="chip audience">New to governance: managers · founders · new DPOs</span>
+      <span class="chip audience">Plain English</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · The map</span>
+      <span class="a3" style="flex:4">20-40 · Which touches you</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>A map, not a deep dive</h2></div>
+    <p class="lede">You do not need to read three rulebooks to govern well. You need to know which ones are in the room and roughly what each is for - the same way you can navigate a city with a subway map without knowing every street. This session draws that map. We name the three regimes, give each a one-line job description, then answer the question everyone actually has: "which of these touches <em>me</em>?" The deeper courses handle the how; today is about the shape and the reach.</p>
+    <div class="callout tip"><strong>Read this first</strong> This whole course is educational, not legal advice. Whether a law truly applies turns on specific facts - this session teaches you the pattern to watch for, then points you at the deeper courses and, for anything real, proper advice.</div>
+    <div class="legend">
+      <span class="pill solid">Live - covered this session</span>
+      <span class="pill light">Self-study - read after</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> A one-line grasp of PDPA, GDPR, and the EU AI Act; the single most important idea about reach - that these laws follow the person or the AI's output, not your office address; and a chooser that tells you which regimes likely apply to your own organisation.</div>
+  </section>
+
+  <section class="section" id="map">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the three regimes</span><h2>Three regimes at a glance <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Here are the three, each in one line. <strong>Singapore's PDPA</strong> is the baseline for handling personal data in Singapore (plus the Do Not Call rules for marketing). <strong>The EU's GDPR</strong> is the world's most influential privacy law, built around the rights of people in the EU. <strong>The EU AI Act</strong> is the first big law aimed squarely at AI systems, sorting them by how risky their use is. Read the table across, not down.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three columns compare PDPA, GDPR, and the EU AI Act across three rows: whose law it is, what it covers, and when it reaches you">
+        <style>
+          .rm1H { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .rm1R { font: 700 12px Inter, sans-serif; fill: #5A6E72; }
+          .rm1B { font: 400 12px Inter, sans-serif; fill: #263238; }
+          .rm1N { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="230" y="24" width="200" height="42" rx="10" fill="#245C2C"/>
+        <text class="rm1H" x="270" y="51">PDPA</text>
+        <rect x="440" y="24" width="200" height="42" rx="10" fill="#3E8E44"/>
+        <text class="rm1H" x="480" y="51">GDPR</text>
+        <rect x="650" y="24" width="200" height="42" rx="10" fill="#64B369"/>
+        <text class="rm1H" x="676" y="51">EU AI Act</text>
+        <text class="rm1R" x="30" y="100">Whose</text>
+        <rect x="230" y="78" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="246" y="99">Singapore's</text><text class="rm1B" x="246" y="117">data-protection law</text>
+        <rect x="440" y="78" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="456" y="99">The EU's privacy</text><text class="rm1B" x="456" y="117">law for people there</text>
+        <rect x="650" y="78" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="666" y="99">The EU's law</text><text class="rm1B" x="666" y="117">for AI systems</text>
+        <text class="rm1R" x="30" y="164">Covers</text>
+        <rect x="230" y="142" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="246" y="163">Personal data + Do</text><text class="rm1B" x="246" y="181">Not Call marketing</text>
+        <rect x="440" y="142" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="456" y="163">Personal data +</text><text class="rm1B" x="456" y="181">strong rights</text>
+        <rect x="650" y="142" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="666" y="163">AI by risk tier -</text><text class="rm1B" x="666" y="181">more risk, more duty</text>
+        <text class="rm1R" x="30" y="228">Reaches you</text>
+        <rect x="230" y="206" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="246" y="227">You handle SG</text><text class="rm1B" x="246" y="245">people's data</text>
+        <rect x="440" y="206" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="456" y="227">You serve/track</text><text class="rm1B" x="456" y="245">EU people</text>
+        <rect x="650" y="206" width="200" height="52" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm1B" x="666" y="227">Your AI's output is</text><text class="rm1B" x="666" y="245">used on EU people</text>
+        <rect x="30" y="284" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="rm1N" x="54" y="296">Read across: same three questions - whose, covers, reaches - for every regime.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three regimes side by side</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Singapore's PDPA - the home baseline<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The <strong>Personal Data Protection Act</strong> is Singapore's baseline for handling personal data. If your organisation collects, uses, or discloses data about people in Singapore - and almost every one does, if only staff records - the PDPA's core promises apply: notice, consent, purpose limitation, protection, access and correction, and telling people when a serious breach happens. Bundled alongside it are the <strong>Do Not Call (DNC) rules</strong>, which govern marketing to Singapore phone numbers. Think of the PDPA as the floor you are almost certainly standing on already.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The EU's GDPR - the influential one<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The <strong>General Data Protection Regulation</strong> is the EU's privacy law and the template much of the world now copies. It covers personal data much as the PDPA does, but with stronger, more detailed rights (including the erasure and portability we met in Session 2) and heavier duties - a lawful basis for every use, and reporting serious breaches fast. The headline for a Singapore reader is its reach: the GDPR protects <em>people in the EU</em>, wherever the organisation sits. We unpack that in Part 2.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The EU AI Act - the new one for AI<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The <strong>EU AI Act</strong> is the first major law written specifically for AI systems. Instead of treating all AI the same, it sorts uses by <strong>risk</strong>: a few uses are banned, some "high-risk" uses (like AI in hiring or credit decisions) carry heavy duties, and most everyday AI carries light or no extra obligations. It is about what the AI <em>does to people</em> - its output and effect - which is why, like the GDPR, it can reach beyond Europe. You do not need the tiers memorised today; just know it exists and that risk is its organising idea.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="reach">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers extraterritorial reach</span><h2>The laws follow the person, not your office <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">Here is the idea that surprises most founders: a European law can bind a company that has never set foot in Europe. The GDPR protects <strong>people in the EU</strong> - so if you offer goods or services to them, or track their behaviour, you are in scope even from a desk in Singapore. The EU AI Act works the same way for AI: if your system's <strong>output is used to make decisions about people in the EU</strong>, it reaches you. The PDPA is more homebound - it is about your handling of <strong>Singapore people's data</strong>. The rule to remember: these laws follow the person (or the AI's effect), not your address.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A Singapore company serving a person in the EU is pulled into scope of EU law, because the law follows the person">
+        <defs>
+          <marker id="arrRm2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0 0 L9 5 L0 10 z" fill="#3E8E44"/>
+          </marker>
+        </defs>
+        <style>
+          .rm2T { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .rm2W { font: 400 12px Inter, sans-serif; fill: #E8F3E6; }
+          .rm2L { font: 600 12px Inter, sans-serif; fill: #5A6E72; }
+          .rm2N { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+          .rm2F { stroke: #3E8E44; stroke-width: 2.5; fill: none; }
+        </style>
+        <rect x="24" y="70" width="200" height="72" rx="12" fill="#245C2C"/>
+        <text class="rm2T" x="44" y="102">SG company</text>
+        <text class="rm2W" x="44" y="124">office only in Singapore</text>
+        <rect x="360" y="70" width="200" height="72" rx="12" fill="#3E8E44"/>
+        <text class="rm2T" x="380" y="102">Person in the EU</text>
+        <text class="rm2W" x="380" y="124">buys / is tracked / judged</text>
+        <rect x="656" y="70" width="200" height="72" rx="12" fill="#64B369"/>
+        <text class="rm2T" x="676" y="102">In scope of EU law</text>
+        <text class="rm2W" x="676" y="124">GDPR and/or AI Act</text>
+        <path class="rm2F" d="M224 106 L354 106" marker-end="url(#arrRm2)"/>
+        <text class="rm2L" x="238" y="95">serves →</text>
+        <path class="rm2F" d="M560 106 L650 106" marker-end="url(#arrRm2)"/>
+        <text class="rm2L" x="566" y="95">pulls in →</text>
+        <rect x="24" y="170" width="832" height="34" rx="8" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="rm2L" x="44" y="192" style="fill:#263238">PDPA, by contrast, is about your handling of Singapore people's data - closer to home.</text>
+        <rect x="24" y="214" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="rm2N" x="48" y="226">Ask "whose people do we touch?" - not "where is our office?"</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - why EU law can reach a Singapore company</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the GDPR can reach Singapore<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The GDPR sets out its own reach (this is Article 3, and that is the only number worth knowing today): it applies not just to organisations based in the EU, but to any organisation, anywhere, that <em>offers goods or services to</em> people in the EU or <em>monitors their behaviour</em>. So a Singapore online shop that ships to Berlin, prices in euros, or runs analytics on EU visitors can be in scope. It is not about a signup for every foreign visitor who stumbles across your site - it is about whether you are aiming at or tracking people in the EU. When in doubt, that is a "get advice" moment.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>How the EU AI Act reaches you<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The EU AI Act follows the AI's <strong>effect</strong>. If you build or use an AI system whose output is used to make decisions about people in the EU - screening EU job applicants, scoring EU customers - the Act can apply, even if your servers and staff are entirely in Singapore. The obligations scale with the risk tier of that use, but the reach principle is the same as the GDPR's: it follows the people affected, not the flag on your building.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>The Singapore SaaS that grew into scope.</strong> A small Singapore analytics startup sold only locally - PDPA, and that was that. Then it landed a customer in the Netherlands and started processing that customer's EU users' data. Overnight the GDPR was in the picture, not because the startup moved, but because the people it now touched were in the EU. Nothing about the office changed; the reach did. That is exactly the pattern this session trains you to spot early.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What "in scope" does and does not mean<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Being "in scope" of a law means its duties can apply to you - not that you are automatically in trouble. It is the signal to learn that regime's basics and, for anything material, get proper advice. Two calming truths: first, most Singapore small businesses live mainly under the PDPA and only meet the GDPR when they deliberately go after EU customers. Second, scope is about facts you control - who you sell to, whom you track, where your AI's decisions land - so you can often <em>choose</em> your exposure. The chooser in Part 3 is built to surface those facts, not to scare you.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="chooser">
+    <div class="section-kicker"><span class="klabel">Part 3 · try it on yourself</span><h2>Which regime touches you? <span class="tag demo">★ 8 min · interactive</span></h2></div>
+    <p class="lede">Answer four plain-English questions about who your data and AI touch, and the chooser lights up the regimes that likely apply - each with the deeper course that teaches it. It is a teaching map of who-reaches-whom, not a legal determination, and your answers never leave your browser.</p>
+    <div class="regimebox" data-caption="A teaching map - not a legal determination. Answers stay in your browser."></div>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Run the chooser on your own org <span class="tag demo">★ 10 min · pen and paper</span></h2></div>
+    <p class="lede">Use the chooser above with your real organisation in mind, then write down what it tells you. This turns the map into your map.</p>
+    <div class="steps">
+      <div class="step"><p>Answer the four questions honestly for your organisation - not the version you wish were true.</p></div>
+      <div class="step"><p>Write down which regimes lit up: PDPA, DNC, GDPR, the EU AI Act - or the ones marked "likely not" for now.</p></div>
+      <div class="step"><p>For each that applies, note the one deeper course it points to, so you know where to go next.</p></div>
+      <div class="step"><p>Flag any answer that was a "not sure". Those are the facts to pin down - they decide your real exposure.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your scope coach (paste into any chat AI)</span>Act as a plain-English governance coach. I will describe my organisation - where we are, who our customers and staff are, whether we market to Singapore phone numbers, whether we serve or track people in the EU, and whether we use AI on people. Tell me which regimes likely apply (Singapore PDPA, DNC, EU GDPR, EU AI Act) and why, in plain words. Remind me this is an educational map, not legal advice. Here is my situation: [describe it]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Three questions that set your scope <span class="tag demo">★ 8 min · your next team chat</span></h2></div>
+    <p class="lede">These are the same facts the chooser turns on. Get your team to answer them out loud and you will know your governance footprint.</p>
+    <div class="steps">
+      <div class="step"><p><strong>EU people:</strong> "Do we offer goods or services to, or track the behaviour of, anyone in the EU?" A yes brings the GDPR into the room.</p></div>
+      <div class="step"><p><strong>AI on people:</strong> "Do we use AI whose output helps decide something about people - especially people in the EU?" A yes puts the EU AI Act on the watch list.</p></div>
+      <div class="step"><p><strong>SG marketing:</strong> "Do we call, text, or fax marketing to Singapore numbers?" A yes means the Do Not Call rules sit on top of the PDPA.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> You are not trying to become a lawyer. You are learning to notice when a new customer, a new market, or a new AI feature quietly changes which laws apply to you - so the answer is "we already know", not "we had no idea".</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before Session 4 <span class="tag exercise">◐ 20 min total</span></h2></div>
+    <ul>
+      <li>Save your chooser result - the list of regimes that apply to you. Sessions 4 onward build on knowing your footprint.</li>
+      <li>Check where your data lives: do any of your vendors or servers sit in, or serve, the EU? That answer often decides GDPR reach.</li>
+      <li>List any AI tools you use that make or shape decisions about people (screening, scoring, recommending). Note who those decisions affect.</li>
+      <li>Optional: skim the "go deeper" course linked for whichever regime matters most to you - just the homepage, to see what is coming.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to sit with this week</strong>
+      <ol>
+        <li>Whose people do we actually touch - only Singapore, or the EU too?</li>
+        <li>If we won an EU customer tomorrow, would we know the GDPR just arrived?</li>
+        <li>Is any AI we use making decisions about people, and where do those people live?</li>
+        <li>Do we market to Singapore phone numbers - and have we ever checked the Do Not Call registers?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Where this fits on the shelf</h2></div>
+    <p class="lede">This on-ramp maps three regimes so you know which deeper course to open next. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Singapore PDPA + Do Not Call, at a glance</span><span class="note">Part 1 · full course: PDPA + DNC</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU GDPR and its reach (follows the person)</span><span class="note">Part 1-2 · full course: GDPR for a SG org</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act, risk-tiered, follows the AI's output</span><span class="note">Part 1-2 · full course: AI Governance</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your company sits entirely in Singapore but sells a subscription to customers in Germany. Which is true?</p>
+      <button class="qopt" type="button">A · Only the PDPA can ever apply, because your office is in Singapore</button>
+      <button class="qopt" type="button">B · No law applies until you open a European office</button>
+      <button class="qopt" type="button">C · The GDPR can reach you, because it follows the people you serve in the EU - not your office</button>
+      <p class="qwhy">The GDPR sets its own reach: offering goods or services to people in the EU (or tracking them) pulls you in, wherever you are based. It follows the person, not the address.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · What does Singapore's PDPA primarily govern?</p>
+      <button class="qopt" type="button">A · How organisations handle personal data of people in Singapore - plus Do Not Call rules for marketing</button>
+      <button class="qopt" type="button">B · Only artificial intelligence systems</button>
+      <button class="qopt" type="button">C · Only companies headquartered in the EU</button>
+      <p class="qwhy">The PDPA is Singapore's baseline for collecting, using, and disclosing personal data, and it carries the Do Not Call rules for marketing to Singapore numbers.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · The EU AI Act is best described as a law about...</p>
+      <button class="qopt" type="button">A · Marketing calls to phone numbers</button>
+      <button class="qopt" type="button">B · AI systems, sorted by the risk of how they are used - more risk, more duty</button>
+      <button class="qopt" type="button">C · Where a company keeps its servers</button>
+      <p class="qwhy">The EU AI Act is the first big law aimed at AI systems, organised around risk tiers: banned uses, high-risk uses with heavy duties, and lighter obligations for the rest.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>PDPA</b><span>Singapore's baseline for personal data, plus Do Not Call marketing rules. Your home floor.</span></div>
+      <div class="cheat-item"><b>GDPR</b><span>The EU's influential privacy law - stronger rights, heavier duties, protects people in the EU.</span></div>
+      <div class="cheat-item"><b>EU AI Act</b><span>First big law for AI, organised by risk tier - more risk, more obligation.</span></div>
+      <div class="cheat-item"><b>The big idea</b><span>Laws follow the person (or the AI's effect), not your office address.</span></div>
+      <div class="cheat-item"><b>GDPR reach</b><span>Serve or track people in the EU and it can apply from Singapore (Article 3).</span></div>
+      <div class="cheat-item"><b>AI Act reach</b><span>Your AI's output used to decide about EU people brings it into scope.</span></div>
+      <div class="cheat-item"><b>PDPA reach</b><span>Closer to home: your handling of Singapore people's personal data.</span></div>
+      <div class="cheat-item"><b>Next</b><span>Session 4 - what happens when it goes wrong: breaches and how to respond.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Session 3 of 6 · learn-governance-101-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a4-breach.html">Next: When it goes wrong →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/regime-chooser.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

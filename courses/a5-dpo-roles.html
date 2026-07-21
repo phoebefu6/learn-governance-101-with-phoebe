@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 5 · Who owns this - learn governance 101 with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-governance-101-with-phoebe</a> / Session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Data &amp; AI Governance, from scratch · Session 5 of 6</div>
+    <h1>Who owns this: <span class="accent">the DPO, and the everyday habit</span></h1>
+    <p class="sub">By now you know what data is, the words for it, the laws around it, and what to do when it goes wrong. One question remains, and it is the one that makes everything else real: <em>who actually looks after this?</em> Good governance is not a binder on a shelf, it is a person who owns it and a small habit the whole team repeats. This hour introduces that person - the Data Protection Officer - shows how accountability is shared between organisations, and hands you a three-word loop you can run forever.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 On-ramp · deciding</span>
+      <span class="chip audience">New to governance: managers · founders · new DPOs</span>
+      <span class="chip audience">Plain English</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-24 · DPO &amp; roles</span>
+      <span class="a3" style="flex:4">24-40 · The habit</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Governance needs an owner and a rhythm</h2></div>
+    <p class="lede">Every rule you have met so far quietly assumes someone is responsible for following it. That is the gap this session fills. Two things turn a good intention into working governance: a clear <strong>owner</strong> - the person accountable, usually called a Data Protection Officer - and a simple <strong>habit</strong> the organisation repeats so nothing goes stale. Get those two in place and governance stops being a project with an end date and becomes just how you run. This hour is about the who and the how-often.</p>
+    <div class="callout tip"><strong>Read this first</strong> This whole course is educational, not legal advice. It is the plain-English on-ramp to four deeper courses (PDPA, GDPR, the EU AI Act, and data governance). When something needs statutory detail, we point you there rather than fake it here.</div>
+    <div class="legend">
+      <span class="pill solid">Live - covered this session</span>
+      <span class="pill light">Self-study - read after</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> A clear picture of what a DPO does and who has to have one, the operational difference between a controller and a processor (who is accountable for what), and a three-word habit - Register, Review, Respond - you can start running this week.</div>
+  </section>
+
+  <section class="section" id="dpo">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the DPO</span><h2>What a DPO does <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">A <strong>Data Protection Officer</strong>, or DPO, is simply the person accountable for data protection in an organisation. Not the person who does everything - the person who makes sure it gets done. Think of them as the hub of a wheel: policy, training, requests, the regulator, risk, and the data inventory all connect through them, even when other people do the day-to-day work.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A DPO sits at the centre of a hub, with spokes reaching out to six duties: set policy, train staff, handle requests, be the regulator contact, advise on risk, and keep the data inventory">
+        <style>
+          .dpo1C { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .dpo1Cs { font: 400 11.5px Inter, sans-serif; fill: #E8F3E6; }
+          .dpo1T { font: 700 13px Inter, sans-serif; fill: #263238; }
+          .dpo1N { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+          .dpo1S { stroke: #C6D1D0; stroke-width: 2; fill: none; }
+        </style>
+        <line class="dpo1S" x1="440" y1="150" x2="150" y2="70"/>
+        <line class="dpo1S" x1="440" y1="150" x2="440" y2="60"/>
+        <line class="dpo1S" x1="440" y1="150" x2="730" y2="70"/>
+        <line class="dpo1S" x1="440" y1="150" x2="150" y2="230"/>
+        <line class="dpo1S" x1="440" y1="150" x2="440" y2="240"/>
+        <line class="dpo1S" x1="440" y1="150" x2="730" y2="230"/>
+        <circle cx="440" cy="150" r="66" fill="#245C2C"/>
+        <text class="dpo1C" x="440" y="146" text-anchor="middle">DPO</text>
+        <text class="dpo1Cs" x="440" y="166" text-anchor="middle">accountable owner</text>
+        <rect x="60" y="44" width="180" height="46" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="dpo1T" x="150" y="72" text-anchor="middle">Set policy</text>
+        <rect x="350" y="30" width="180" height="46" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="dpo1T" x="440" y="58" text-anchor="middle">Train staff</text>
+        <rect x="640" y="44" width="180" height="46" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="dpo1T" x="730" y="72" text-anchor="middle">Handle requests</text>
+        <rect x="60" y="210" width="180" height="46" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="dpo1T" x="150" y="238" text-anchor="middle">Regulator contact</text>
+        <rect x="350" y="224" width="180" height="46" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="dpo1T" x="440" y="252" text-anchor="middle">Advise on risk</text>
+        <rect x="640" y="210" width="180" height="46" rx="10" fill="#EFF7ED" stroke="#A6D9A6"/>
+        <text class="dpo1T" x="730" y="238" text-anchor="middle">Keep the inventory</text>
+        <rect x="30" y="306" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="dpo1N" x="54" y="318">A DPO advises and oversees - they don't personally own every dataset. They make sure someone does.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the DPO at the hub of six duties</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The six things a DPO actually does<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Strip away the title and a DPO's job is six practical things:</p>
+        <ul>
+          <li><strong>Set policy</strong> - decide how the organisation handles personal data, and write it down.</li>
+          <li><strong>Train staff</strong> - make sure everyone knows the basics, so governance is not one person's secret.</li>
+          <li><strong>Handle requests and complaints</strong> - when someone asks "what do you hold on me?" or complains, the DPO owns the response.</li>
+          <li><strong>Be the regulator's contact</strong> - the named person the PDPC or an EU authority calls.</li>
+          <li><strong>Advise on risk</strong> - flag when a new project or tool needs a closer look before it launches.</li>
+          <li><strong>Keep the data inventory</strong> - maintain the running list of what data the organisation holds, where, and why.</li>
+        </ul>
+        <p>Notice the verb that repeats: <em>make sure</em>. A DPO advises and oversees - they do not personally own every dataset or do every task. Their job is to see that it happens.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Who has to have a DPO?<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>This is where Singapore and Europe differ in a way worth remembering:</p>
+        <ul>
+          <li><strong>Singapore's PDPA: everyone.</strong> Every organisation must appoint at least one DPO and publish a way to contact them. The DPO can be an existing staff member - the office manager, the founder, whoever - it does not need to be a new hire. But the role must exist and be reachable.</li>
+          <li><strong>The EU's GDPR: some, not all.</strong> A DPO is mandatory only for certain organisations - public bodies, and those doing large-scale monitoring or handling sensitive data at scale. Many others appoint one anyway because it is good practice.</li>
+        </ul>
+        <p>The plain takeaway: if you operate in Singapore, you need a named DPO today, full stop. If GDPR touches you, check whether you fall into the "must" group - and consider one regardless.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>The founder who was already the DPO.</strong> A ten-person startup panicked that "appoint a DPO" meant hiring an expensive specialist. It did not. They named the operations lead - who already knew where every system lived - published her email on the website as the contact, and gave her a half-day a month for it. That satisfied the PDPA's requirement and, more importantly, gave the company one clear owner. Small teams do not need a big title; they need a real name.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>A DPO is a shield, not just a cost<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is tempting to see the DPO as a box to tick. In practice, having one clear owner is what stops governance falling through the cracks between departments. When a breach happens, when a customer asks for their data, when a new AI tool is being bought - there is a single person who knows the picture and can act. That is worth far more than the label. The best DPOs are not the most senior people; they are the ones who genuinely know where the data lives and are trusted to raise a hand when something looks off.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="roles">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers accountability</span><h2>Controller vs processor, operationally <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Session 2 introduced these two roles; now let us make them about <strong>accountability</strong> - who answers for what. The <strong>controller</strong> is the organisation that decides why and how personal data is used, and it carries the most responsibility. The <strong>processor</strong> acts only on the controller's instructions, and its job is to protect the data and follow the contract. When something goes wrong, the first question a regulator asks is "who was the controller?"</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two side-by-side lanes: the controller decides why and how data is used and is most accountable, while the processor only acts on instructions and must protect the data and follow the contract">
+        <style>
+          .rol1T { font: 700 16px Inter, sans-serif; fill: #FFFFFF; }
+          .rol1L { font: 700 12px Inter, sans-serif; fill: #E8F3E6; }
+          .rol1W { font: 400 12.5px Inter, sans-serif; fill: #E8F3E6; }
+          .rol1N { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="34" width="390" height="210" rx="14" fill="#245C2C"/>
+        <text class="rol1L" x="54" y="66">MOST ACCOUNTABLE</text>
+        <text class="rol1T" x="54" y="94">Controller</text>
+        <text class="rol1W" x="54" y="128">Decides WHY the data is used</text>
+        <text class="rol1W" x="54" y="152">Decides HOW it is used</text>
+        <text class="rol1W" x="54" y="176">Answers to the regulator first</text>
+        <text class="rol1W" x="54" y="200">Owns consent, purpose, notice</text>
+        <text class="rol1W" x="54" y="224">Example: the shop itself</text>
+        <rect x="460" y="34" width="390" height="210" rx="14" fill="#3E8E44"/>
+        <text class="rol1L" x="484" y="66">ACTS ON INSTRUCTIONS</text>
+        <text class="rol1T" x="484" y="94">Processor</text>
+        <text class="rol1W" x="484" y="128">Only does what it is told to</text>
+        <text class="rol1W" x="484" y="152">Must protect the data</text>
+        <text class="rol1W" x="484" y="176">Must follow the contract</text>
+        <text class="rol1W" x="484" y="200">Cannot reuse data for itself</text>
+        <text class="rol1W" x="484" y="224">Example: the payroll vendor</text>
+        <rect x="30" y="266" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="rol1N" x="54" y="278">Deciding why and how = you're the controller = you carry the most responsibility.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - controller vs processor, side by side</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The one question that tells them apart<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You do not need to memorise definitions. Ask one question: <strong>"Who decided why this data is being used, and how?"</strong></p>
+        <ul>
+          <li>If <em>you</em> decided the purpose and the means, you are the <strong>controller</strong> - and you carry the most responsibility for getting it right.</li>
+          <li>If you are only doing what another organisation told you to do with their data, you are the <strong>processor</strong> - your duties are to protect it and stick to the contract.</li>
+        </ul>
+        <p>Most organisations are both, depending on the data. You are the controller of your own customer and staff records; you are a processor when you handle data on behalf of a client.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the split matters when things go wrong<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The controller-processor line is not academic - it decides who is on the hook. The controller answers to the regulator and to the people whose data it is. The processor answers to the controller, and must have a contract spelling out exactly what it may and may not do. If a processor goes off-script - reuses the data for its own marketing, say - it steps over the line and takes on liability it did not have before.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>The shop and its payroll vendor.</strong> A retail shop collects its staff's bank details to pay salaries - the shop decided why (to pay people) and how, so the shop is the controller. It uses an outside payroll company to actually run the payments. That vendor is the processor: it only touches the data to do the job the shop hired it for, must keep it secure, and must not use those bank details for anything else. If the vendor sold the list, that would be its own serious breach - but the shop, as controller, still has to answer for choosing and overseeing it.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="habit">
+    <div class="section-kicker"><span class="klabel">Part 3 · covers the everyday loop</span><h2>Governance is a habit, not a project <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">Here is the idea that outlasts this whole course. Governance done once and filed away rots quietly - data moves, people leave, systems change. Governance that works is a small loop you repeat forever. Three words: <strong>Register, Review, Respond</strong>. Keep a register of what you hold, review it regularly, and respond to what comes up. Then round again.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A three-step loop: register what data you hold, review it regularly, respond to requests and incidents, then back to register">
+        <defs>
+          <marker id="arrHab1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5A6E72"/>
+          </marker>
+        </defs>
+        <style>
+          .hab1T { font: 700 16px Inter, sans-serif; fill: #FFFFFF; }
+          .hab1W { font: 400 12px Inter, sans-serif; fill: #E8F3E6; }
+          .hab1N { font: 600 13.5px Inter, sans-serif; fill: #422006; }
+          .arrHab1 { stroke: #5A6E72; stroke-width: 2.5; fill: none; }
+        </style>
+        <rect x="70" y="70" width="200" height="110" rx="14" fill="#245C2C"/>
+        <text class="hab1T" x="170" y="118" text-anchor="middle">1 · Register</text>
+        <text class="hab1W" x="170" y="144" text-anchor="middle">what we hold,</text>
+        <text class="hab1W" x="170" y="162" text-anchor="middle">where, and why</text>
+        <rect x="340" y="70" width="200" height="110" rx="14" fill="#3E8E44"/>
+        <text class="hab1T" x="440" y="118" text-anchor="middle">2 · Review</text>
+        <text class="hab1W" x="440" y="144" text-anchor="middle">still needed?</text>
+        <text class="hab1W" x="440" y="162" text-anchor="middle">still safe?</text>
+        <rect x="610" y="70" width="200" height="110" rx="14" fill="#64B369"/>
+        <text class="hab1T" x="710" y="118" text-anchor="middle">3 · Respond</text>
+        <text class="hab1W" x="710" y="144" text-anchor="middle">to requests</text>
+        <text class="hab1W" x="710" y="162" text-anchor="middle">and incidents</text>
+        <path class="arrHab1" d="M276 125 L334 125" marker-end="url(#arrHab1)"/>
+        <path class="arrHab1" d="M546 125 L604 125" marker-end="url(#arrHab1)"/>
+        <path class="arrHab1" d="M710 186 C710 240, 170 240, 170 186" marker-end="url(#arrHab1)"/>
+        <text class="hab1N" x="440" y="232" text-anchor="middle">round and round - never finished</text>
+        <rect x="70" y="266" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="hab1N" x="94" y="278">A quarter-page register you actually keep beats a perfect one you write once and forget.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the Register, Review, Respond loop</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Register, Review, Respond - what each one means<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The whole loop fits on one page:</p>
+        <ul>
+          <li><strong>Register</strong> - keep a simple running list of what personal data you hold, where it lives, and why you have it. This is your map. Without it, every other move is guesswork.</li>
+          <li><strong>Review</strong> - look at the register on a regular rhythm (a quarter is a fine start) and ask two questions of each entry: do we still need this, and is it still safe? Delete what you do not need; fix what is not protected.</li>
+          <li><strong>Respond</strong> - when a person asks for their data, or a breach happens, or a new project appears, respond promptly - and feed what you learn back into the register.</li>
+        </ul>
+        <p>That is it. A DPO owns the loop; the whole team feeds it. Do this and you will never be caught not knowing what you hold.</p>
+        <div class="callout tip"><strong>Governance in one sentence</strong> "We keep a register of the data we hold, review it on a rhythm, and respond when people or events ask us to." Say that and you have described a working program.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Find your DPO, start your register <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Two concrete artefacts that put this session to work. Neither takes long, and both are things a real DPO would want to exist.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Find the owner.</strong> Ask around: who is our DPO? If there is one, note their name and how they are published. If there is not, note who <em>should</em> be - the person who already knows where the data lives.</p></div>
+      <div class="step"><p><strong>Start the register.</strong> On one page, list five kinds of personal data you hold. For each, write three things: where it lives, why you have it, and who can reach it.</p></div>
+      <div class="step"><p><strong>Review it once.</strong> Go down your five and ask the two questions: still needed? still safe? Mark anything that fails either test.</p></div>
+      <div class="step"><p><strong>Spot one response.</strong> Pick one entry and ask: if a customer asked us to delete this tomorrow, could we, and who would do it? That is your Respond muscle.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your register-starter partner (paste into any chat AI)</span>Act as a plain-English data-governance coach. Help me start a one-page data register. I'll tell you the kinds of personal data my organisation holds, and for each I want you to ask me: (1) where does it live, (2) why do we have it, (3) who can access it, and (4) do we still need it. Then summarise it as a simple table I can keep and review each quarter. No legal jargon, and remind me this is educational, not legal advice. Here is what we hold: [list it]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Three questions about the habit <span class="tag demo">★ 8 min · your next team chat</span></h2></div>
+    <p class="lede">The loop only works if it is actually running. These three questions tell you honestly whether it is.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Register:</strong> "Do we have a single list of what personal data we hold?" If the honest answer is "it's in a few people's heads", that is your first task.</p></div>
+      <div class="step"><p><strong>Review:</strong> "When did we last look at that list and clear out what we no longer need?" If nobody can remember, the rhythm has stopped.</p></div>
+      <div class="step"><p><strong>Respond:</strong> "If someone asked for their data, or complained, who responds - and how fast?" A clear name here is a sign of a healthy habit.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> You will not build a perfect program in a week, and you do not need to. You need an owner with a name and a loop that keeps turning. Everything else - the policies, the training, the deeper legal detail - hangs off those two.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before Session 6 <span class="tag exercise">◐ 20 min total</span></h2></div>
+    <ul>
+      <li>Confirm your DPO in writing - the name, and where their contact is published. If there is not one, propose who it should be to whoever decides.</li>
+      <li>Turn your five-line register into something the team can see - a shared doc, a pinned note - so it is not just yours.</li>
+      <li>Put one recurring review in the calendar: a 30-minute "what data do we hold, still needed, still safe?" every quarter.</li>
+      <li>Optional: for one dataset, sketch who is the controller and who is a processor. Notice where you are each.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to sit with this week</strong>
+      <ol>
+        <li>Who is our DPO - and does the rest of the team know their name?</li>
+        <li>Where is the data we are the controller of, versus data we only process for others?</li>
+        <li>Do we have a register at all, or is it in people's heads?</li>
+        <li>When something needs a response, is it clear who owns it?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Where this fits on the shelf</h2></div>
+    <p class="lede">This on-ramp distills the plain-English core of the deeper courses. This session covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">What a DPO does + who must appoint one</span><span class="note">Part 1 · deeper in Data Governance</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Controller vs processor accountability</span><span class="note">Part 2 · deeper in Data Governance</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Building the full program &amp; register</span><span class="note">named here · full detail in the Data Governance course</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Under Singapore's PDPA, which organisations must appoint at least one DPO?</p>
+      <button class="qopt" type="button">A · Only large companies over a certain size</button>
+      <button class="qopt" type="button">B · Only organisations that handle sensitive data</button>
+      <button class="qopt" type="button">C · Every organisation - and it can be an existing staff member</button>
+      <p class="qwhy">The PDPA requires every organisation to appoint at least one DPO and publish a contact. It can be existing staff - it does not need to be a new specialist hire.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Your shop hires an outside payroll company to pay staff, using bank details you collected. Who is the controller?</p>
+      <button class="qopt" type="button">A · The shop - it decided why and how the data is used, so it carries the most responsibility</button>
+      <button class="qopt" type="button">B · The payroll company - it actually touches the data</button>
+      <button class="qopt" type="button">C · Neither - nobody is accountable</button>
+      <p class="qwhy">The controller is whoever decides why and how the data is used. The shop decided; the payroll vendor only acts on instructions, so it is the processor. The controller carries the most responsibility.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · What is the "Register, Review, Respond" habit?</p>
+      <button class="qopt" type="button">A · A one-time audit you do before a launch and then file away</button>
+      <button class="qopt" type="button">B · A repeating loop: keep a register of what you hold, review it on a rhythm, respond to requests and incidents</button>
+      <button class="qopt" type="button">C · Three separate legal forms you submit to the regulator</button>
+      <p class="qwhy">Governance is a habit, not a project. You keep a register of what you hold, review it regularly (still needed? still safe?), and respond to requests and incidents - then round again.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>DPO, plainly</b><span>The person accountable for data protection - makes sure it gets done, doesn't do it all alone.</span></div>
+      <div class="cheat-item"><b>Six DPO duties</b><span>Policy · training · requests · regulator contact · advise on risk · keep the inventory.</span></div>
+      <div class="cheat-item"><b>PDPA: everyone</b><span>Every org must appoint a DPO (can be existing staff) and publish a contact.</span></div>
+      <div class="cheat-item"><b>GDPR: some</b><span>Mandatory for public bodies + large-scale monitoring or sensitive data; common otherwise.</span></div>
+      <div class="cheat-item"><b>Controller</b><span>Decides why and how data is used - carries the most responsibility. E.g. the shop.</span></div>
+      <div class="cheat-item"><b>Processor</b><span>Acts only on instructions, must protect + follow the contract. E.g. the payroll vendor.</span></div>
+      <div class="cheat-item"><b>The one question</b><span>"Who decided why and how?" = the controller.</span></div>
+      <div class="cheat-item"><b>Register, Review, Respond</b><span>The everyday loop - governance is a habit, not a project.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Session 5 of 6 · learn-governance-101-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a6-next-steps.html">Next: Your next steps →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
